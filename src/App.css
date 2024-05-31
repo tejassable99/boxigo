@@ -1,0 +1,32 @@
+/* Custom CSS to remove default blue background and add orange vertical bar on the right */
+.ant-menu-item-selected {
+  background-color: white !important; /* Remove default blue background */
+  border-left: 4px solid orange; /* Add orange vertical bar on the right */
+}
+.custom-checkbox {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: white;
+  border: 2px solid orange;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.custom-checkbox:checked::before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 18px;
+  border: solid orange;
+  border-width: 0 4px 4px 0;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  left: 6px;
+}
